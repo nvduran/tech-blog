@@ -11,6 +11,7 @@ router.get('/', (req, res) => {
       'post_url',
       'title',
       'created_at',
+      'article',
       [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
     ],
     include: [
@@ -53,12 +54,13 @@ router.get('/post/:id', (req, res) => {
       'post_url',
       'title',
       'created_at',
+      'article',
       [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
     ],
     include: [
       {
         model: Comment,
-        attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+        attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at', 'article'],
         include: {
           model: User,
           attributes: ['username']
