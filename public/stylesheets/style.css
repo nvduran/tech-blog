@@ -12,13 +12,14 @@ body, html {
 
 a {
   text-decoration: none;
-  color: #225ca3;
+  color: #ffffff;
   font-weight: bold;
   transition: color .1s;
+  padding: 0.1%;
 }
 
 a:hover {
-  color: #3486eb;
+  color: #ffffff;
 }
 
 button {
@@ -75,7 +76,6 @@ form label {
 }
 
 header {
-  border-bottom: 1px solid #ccc;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -175,4 +175,17 @@ footer {
   justify-content: center;
   padding: 1%;
   font-size: 110%;
+}
+
+.post-title {
+  background-color: #3486eb;
+  font-size: 150%;
+}
+
+.title-card {
+  border: solid rgb(207, 207, 207);
+}
+
+.top-buttons {
+  color: black;
 }
